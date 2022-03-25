@@ -1,4 +1,4 @@
-package com.datngo.customer.dto;
+package com.datngo.customer.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

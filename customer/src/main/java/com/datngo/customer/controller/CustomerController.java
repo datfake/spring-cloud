@@ -1,6 +1,6 @@
 package com.datngo.customer.controller;
 
-import com.datngo.customer.dto.CustomerRequest;
+import com.datngo.customer.model.CustomerRequest;
 import com.datngo.customer.service.CustomerService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,7 +19,7 @@ public class CustomerController {
     }
 
     @PostMapping
-    public void registerCustomer(@RequestBody CustomerRequest customerRequest) {
+    public void registerCustomer(@RequestBody CustomerRequest customerRequest) throws IllegalAccessException {
         log.info("Register successfully customer {}", customerRequest);
         customerService.register(customerRequest);
     }
